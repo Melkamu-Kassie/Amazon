@@ -1,11 +1,15 @@
 
 import './App.css'
+import Header from './Components/Header/Header'
+// import Reserv from './Components/Header/Reserv'
+import SubHeader from './Components/Header/SubHeader'
 
 function App() {
 
   return (
     <>
-      <h1>hello</h1>
+    <Header />
+    <SubHeader />
     </>
   )
 }

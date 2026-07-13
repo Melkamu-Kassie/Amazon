@@ -1,0 +1,217 @@
+/* Header Base Style */
+.amazon-header {
+  height: 60px;
+  background-color: #131921;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 10px;
+  font-family: Arial, sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* Hover effect for all items */
+.header-nav-item {
+  padding: 8px 10px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.header-nav-item:hover {
+  border: 1px solid white;
+}
+
+/* Logo styling */
+.header-logo-container {
+  padding: 1px 4px;
+  margin-top: 5px;
+}
+
+.header-logo {
+  width: 95px;
+  object-fit: contain;
+}
+
+/* Deliver to styling */
+.header-delivery {
+  margin-left: 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.delivery-icon {
+  margin-right: 3px;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.delivery-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.delivery-line1 {
+  font-size: 11px;
+  color: #ccc;
+}
+
+.delivery-line2 {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Search Bar styling */
+.header-search {
+  display: flex;
+  flex: 1;
+  height: 40px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0 10px;
+  background-color: white;
+}
+
+.header-search:focus-within {
+  box-shadow: 0 0 0 2px #f3a847; /* Focus border color */
+}
+
+.search-select {
+  background-color: #dadada;
+  border: none;
+  outline: none;
+  height: 100%;
+  width: 50px;
+  padding-left: 8px;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  border-right: 1px solid #ccc;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.search-select:hover {
+  background-color: #cacaca;
+  color: black;
+}
+
+.search-input {
+  flex: 1;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.search-button {
+  background-color: #febd69;
+  border: none;
+  outline: none;
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  color: #333;
+}
+
+.search-button:hover {
+  background-color: #f3a847;
+}
+
+/* Right Navigation Section */
+.header-nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.header-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* Language Dropdown styling */
+.header-language {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.flag-icon {
+  width: 18px;
+  height: auto;
+  border: 1px solid #555;
+}
+
+.language-text {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Dropdown Arrow */
+.arrow-down {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 4px solid #a7a7a7;
+  margin-left: 4px;
+}
+
+/* Options (Account / Orders) text */
+.option-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-line1 {
+  font-size: 11px;
+  color: #eee;
+}
+
+.option-line2 {
+  font-size: 13px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+/* Cart styling */
+.header-cart {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 5px;
+}
+
+.cart-icon-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.cart-count {
+  position: absolute;
+  top: 1px;
+  left: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #f08804;
+}
+
+.cart-text {
+  font-size: 14px;
+  font-weight: bold;
+  margin-left: 2px;
+  margin-bottom: 5px;
+}

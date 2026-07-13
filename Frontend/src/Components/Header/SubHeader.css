@@ -1,0 +1,53 @@
+/* Sub-Header Container */
+.amazon-subheader {
+  height: 39px;
+  background-color: #232f3e; /* ከዋናው ሄደር ጥቂት ቀለል ያለ ሰማያዊ ጥቁር */
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 0 10px;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+/* Links Wrapper */
+.subheader-links {
+  display: flex;
+  align-items: center;
+}
+
+/* Hover style for items */
+.subheader-item {
+  padding: 5px 9px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: border 0.1s ease;
+}
+
+.subheader-item:hover {
+  border: 1px solid white;
+}
+
+/* "All" button specific styling */
+.header-all-menu {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px; /* በአይኮኑ እና በፅሁፉ መካከል ክፍተት ለመስጠት */
+}
+
+.menu-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* Space between navigation links */
+.subheader-link {
+  margin-left: 2px;
+}
