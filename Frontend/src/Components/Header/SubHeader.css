@@ -51,3 +51,13 @@
 .subheader-link {
   margin-left: 2px;
 }
+@media (max-width: 480px) {
+  .amazon-subheader {
+    font-size: 13px; /* Slightly smaller text for better mobile fit */
+    height: 35px;
+  }
+  
+  .subheader-item {
+    padding: 4px 7px;
+  }
+}
