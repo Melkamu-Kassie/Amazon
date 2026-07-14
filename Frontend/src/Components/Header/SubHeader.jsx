@@ -22,7 +22,6 @@ function SubHeader() {
         <a href="/sell" className="subheader-item subheader-link">Sell</a>
         <a href="/registry" className="subheader-item subheader-link">Registry</a>
         <a href="/customer-service" className="subheader-item subheader-link">Customer Service</a>
-        
       </div>
     </div>
   );
