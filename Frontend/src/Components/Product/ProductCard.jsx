@@ -2,14 +2,14 @@ import React from "react";
 import "./Product.css";
 import Rating from "@mui/material/Rating";
 import Currency from "../Currency/Currency";
-
+import {Link}  from "react-router-dom";
 function ProductCard({ product }) {
   const { title, image, id, price, rating } = product || {};
   return (
     <div className="product_card">
-      <a href="" className="product_image_link">
+      <Link to= {`/products/${id}`} className="product_image_link">
         <img src={image} alt={title} className="product_image" />
-      </a>
+      </Link>
       <div className="product_info">
         <h3 className="product_title">{title}</h3>
         <div className="product_rating_container">
@@ -24,5 +24,4 @@ function ProductCard({ product }) {
     </div>
   );
 }
-
 export default ProductCard;
