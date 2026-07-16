@@ -1,10 +1,10 @@
 import React from 'react'
-import './SignUp.css'
 import LayOut from "../../Components/Layout/LayOut";
-function SignUp() {
+
+function Payment() {
   return (
-    <LayOut>SignUp</LayOut>
+    <LayOut>Payment</LayOut>
   )
 }
 
-export default SignUp;
+export default Payment;
