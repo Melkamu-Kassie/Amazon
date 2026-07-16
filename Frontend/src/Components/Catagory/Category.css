@@ -2,34 +2,30 @@
 .category_container {
   display: flex;            
   flex-direction: row;      
-  flex-wrap: nowrap;        /* በአንድ መስመር አራቱንም ለማቆየት */
-  justify-content: center;  /* መሃል ላይ እኩል እንዲሰለፉ */
+  flex-wrap: nowrap;        
+  justify-content: center;  
   align-items: stretch;     
-  gap: 20px;                /* በካርዶቹ መካከል ያለው ክፍተት */
-  padding: 0 20px;          /* ግራና ቀኝ ብቻ padding ሰጥተነዋል */
+  gap: 20px;                
+  padding: 0 20px;        
   width: 100%;
   box-sizing: border-box;
-
-  /* ካርዶቹ ወደ ላይ ተንሳፈው ከጀርባው ባነር ላይ እንዲደራረቡ የሚያደርገው ዋናው ኮድ */
   position: relative;
-  z-index: 10;              /* ከባነሩ በላይ እንዲወጣ ያደርገዋል */
-  margin-top: -100px;       /* ወደ ላይ 100px ከፍ እንዲል ያደርገዋል */
+  z-index: 10;              
+  margin-top: -100px;      
 }
-
-/* እያንዳንዱ ካርድ */
 .category_card {
-  flex: 1;                  /* አራቱም እኩል ቦታ እንዲይዙ */
-  min-width: 220px;         /* በጣም ጠባብ እንዳይሆኑ መከላከያ */
-  max-width: 320px;         /* በጣም እንዳይሰፉ ገደብ */
+  flex: 1;                  
+  min-width: 220px;        
+  max-width: 320px;         
   background-color: #ffffff;
-  padding: 20px 15px 15px 15px; /* ከላይ 20px፣ በጎንና ታች 15px */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); /* ለስላሳ ጥላ */
-  border-radius: 0px;       /* ምስሉ ላይ እንዳለው ጠርዙ ቀጥ ያለ ነው */
+  padding: 20px 15px 15px 15px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08); 
+  border-radius: 0px;       
   display: flex;
   flex-direction: column;
 }
 
-/* በካርዱ ውስጥ ያለው ሊንክ */
+
 .category_card a {
   text-decoration: none;
   color: #111111;
@@ -38,7 +34,7 @@
   height: 100%;
 }
 
-/* የርዕሱ ስታይል */
+
 .category_card h2 {
   font-size: 21px;
   font-family: inherit;
