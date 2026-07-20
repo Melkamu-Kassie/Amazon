@@ -7,7 +7,6 @@ import Orders from "./Orders/Orders";
 import Cart from "./Cart/Cart";
 import Result from './Result/Result'
 import ProductDetail from './ProductDetail/ProductDetail';
-
 function Routering() {
   return (
     <Router>

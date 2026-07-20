@@ -7,6 +7,7 @@ function Product() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null); // ስህተት ከተፈጠረ ለመያዝ
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     axios
@@ -14,11 +15,13 @@ function Product() {
       .then((res) => {
         setProducts(res.data);
         setLoading(false);
+        setIsLoading(false);
       })
       .catch((err) => {
         console.error("ዳታ በማምጣት ላይ ስህተት ተፈጥሯል: ", err);
         setError("ምርቶችን ማምጣት አልተቻለም። እባክዎ ኔትወርክዎን ያረጋግጡ!");
         setLoading(false);
+        setIsLoading(false);
       });
   }, []);
 
@@ -30,8 +33,6 @@ function Product() {
       </div>
     );
   }
-
-  // 3. የኔትወርክ ስህተት ካለ ይህንን ያሳያል
   if (error) {
     return (
       <div style={{ textAlign: "center", color: "red", padding: "40px" }}>
@@ -39,14 +40,16 @@ function Product() {
       </div>
     );
   }
-
   return (
-    // 4. ምርቶቹ በሥርዓት እንዲቀመጡ ክላስ ሰጥተነዋል
-    <section className="products_container">
+    <>
+    {isLoading? <Loader /> : (<section className="products_container">
       {products.map((product) => (
         <ProductCard key={product.id} product={product} />
       ))}
-    </section>
+    </section>)}
+    
+    </>
+    
   );
 }
 

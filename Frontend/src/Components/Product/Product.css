@@ -1,5 +1,8 @@
+/* ==========================================================================
+   1. PRODUCTS GRID CONTAINER
+   ========================================================================== */
 .products_container {
-   display: grid;
+  display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px; 
   padding: 20px;
@@ -8,31 +11,41 @@
   box-sizing: border-box;
   box-shadow: #0f1111 0px 1px 2px 0px;
 }
+
+/* ==========================================================================
+   2. NORMAL PRODUCT CARD (መደበኛው የካርድ ስታይል)
+   ========================================================================== */
 .product_card {
-   display: flex;
+  display: flex;
   flex-direction: column;
   background-color: #ffffff;
   border: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0; 
   border-radius: 25px;
-  padding: 10px;
+  padding: 12px;
   min-height: 380px;
+  max-width: 280px;
+  min-width: 220px;
+  width: 100%; 
+  font-family: "Amazon Ember", Arial, sans-serif;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   box-sizing: border-box;
-  width: 100%; 
 }
 
 .product_card:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+
+/* መደበኛ የካርድ ምስል ማስቀመጫ */
 .product_image_link {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 180px;
   margin-bottom: 15px; 
-   text-decoration: none; 
+  text-decoration: none;
 }
 
 .product_image {
@@ -40,13 +53,17 @@
   max-height: 100%;
   object-fit: contain;
 }
+
+/* መደበኛ የካርድ መረጃዎች መያዣ */
 .product_info {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   text-align: left;
 }
-  .product_title {
+
+/* መደበኛው የርዕስ አቀራረብ (በ2 መስመር እንዲቆረጥ) */
+.product_title {
   font-size: 0.88rem;
   font-weight: 600;
   color: #111111;
@@ -54,32 +71,39 @@
   line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
-  line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   min-height: 2.8em;
-} 
+}
+
+/* የኮከብ (Rating) መያዣ */
 .product_rating_container {
   display: flex;
   align-items: center;
   gap: 5px;
   margin-bottom: 8px;
 }
+
 .product_rating_container .MuiRating-root {
   font-size: 1.1rem;
 }
+
 .product_rating_count {
   font-size: 0.78rem;
   color: #565959;
 }
+
+/* የዋጋ ማስቀመጫ */
 .product_price_container {
   font-size: 1.05rem;
   font-weight: 700;
   color: #0f1111;
   margin-bottom: 15px;
-  margin-top: auto;
+  margin-top: auto; 
 }
+
+/* አድ ቱ ካርት በተን */
 .product_add_btn {
   background-color: #ffd814;
   border: 1px solid #fcd200;
@@ -92,19 +116,119 @@
   transition: background-color 0.1s ease;
   width: 100%;
 }
+
 .product_add_btn:hover {
   background-color: #f7ca00;
 }
+
+/* ==========================================================================
+   3. PRODUCT DETAIL PAGE (FLEXED VIEW - ጎን ለጎን)
+   ========================================================================== */
+.product_card.product__flexed {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: flex-start !important;
+  gap: 50px !important; 
+  width: 100% !important;
+  max-width: 1200px !important; 
+  min-height: auto !important; 
+  height: auto !important; 
+  box-shadow: none !important;
+  padding: 20px;
+  border: none; 
+}
+
+/* በDetail ፔጅ ላይ የግራው ምስል ስፋት */
+.product__flexed .product_image_link {
+  flex: 1 !important;
+  max-width: 400px !important;
+  min-width: 280px !important;
+  height: auto !important; 
+  margin-bottom: 0px !important;
+}
+
+.product__flexed .product_image {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 400px !important;
+}
+
+/* በDetail ፔጅ ላይ የቀኙ ፅሁፍ መረጃ ማስቀመጫ */
+.product__flexed .product_info {
+  flex: 2 !important; 
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 10px; 
+}
+
+/* ርዕሱ (Title) በነጻነት ወደ ጎን እንዲረዝም ማድረጊያ */
+.product__flexed .product_title {
+  font-size: 1.4rem !important; 
+  font-weight: 700;
+  width: 100% !important;
+  max-width: none !important;
+  display: block !important; 
+  overflow: visible !important;
+  white-space: normal !important; 
+  min-height: auto !important;
+}
+
+/* የምርቱ መግለጫ (Description) */
+.product__flexed .product_info div {
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+.product__flexed .product_price_container {
+  margin-top: 15px !important; 
+  font-size: 1.3rem !important;
+  margin-bottom: 0px !important;
+}
+
+/* ==========================================================================
+   4. DETAIL ፔጅ ላይ የ"ADD TO CART" BUTTON ብቻ ለይቶ ማሳነስ
+   ========================================================================== */
+.product__flexed .product_add_btn {
+  width: auto !important; 
+  max-width: 150px !important; 
+  padding: 4px 16px !important; 
+  font-size: 0.78rem !important; 
+  font-weight: 500 !important;
+  text-transform: lowercase !important; /* add to cart (በትናንሽ ፊደላት) */
+  border-radius: 20px !important; 
+  margin-top: 15px !important; 
+  display: inline-block !important; 
+  text-align: center;
+}
+
+/* ==========================================================================
+   5. RESPONSIVE MEDIA QUERIES (ለተለያዩ ስክሪኖች)
+   ========================================================================== */
 @media (max-width: 1100px) {
   .products_container {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
 @media (max-width: 900px) {
   .products_container {
     grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media (max-width: 768px) {
+  .product_card.product__flexed {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  .product__flexed .product_image_link {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 650px) {
   .products_container {
     grid-template-columns: repeat(2, 1fr);
