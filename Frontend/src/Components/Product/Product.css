@@ -196,16 +196,12 @@
   padding: 4px 16px !important; 
   font-size: 0.78rem !important; 
   font-weight: 500 !important;
-  text-transform: lowercase !important; /* add to cart (በትናንሽ ፊደላት) */
+  text-transform: uppercase !important; 
   border-radius: 20px !important; 
   margin-top: 15px !important; 
   display: inline-block !important; 
   text-align: center;
 }
-
-/* ==========================================================================
-   5. RESPONSIVE MEDIA QUERIES (ለተለያዩ ስክሪኖች)
-   ========================================================================== */
 @media (max-width: 1100px) {
   .products_container {
     grid-template-columns: repeat(4, 1fr);
